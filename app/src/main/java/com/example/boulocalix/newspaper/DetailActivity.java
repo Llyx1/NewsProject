@@ -72,8 +72,8 @@ public class DetailActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            link = item.getLink();
             super.onPreExecute();
+            link = item.getLink();
         }
 
         @Override

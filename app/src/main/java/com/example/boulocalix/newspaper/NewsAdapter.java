@@ -1,18 +1,12 @@
 package com.example.boulocalix.newspaper;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 //import com.bumptech.glide.Glide;
@@ -35,7 +29,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder>
     }
 
     public interface newsAdapterOnClickHandler {
-        void onClick(FeedItem item);
+        void onPostClicked(FeedItem item);
     }
 
     public void setListener(newsAdapterOnClickHandler clickHandler){
@@ -46,6 +40,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder>
         this.feedItems=feedItems;
         this.context=context;
     }
+
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.activity_news_adapter,parent,false);
@@ -71,10 +66,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder>
 
     @Override
     public int getItemCount() {
-        if (feedItems != null ) {
+        //if (feedItems != null ) {
         return feedItems.size();}
-        else {return -1;}
-    }
+        //else {return -1;}
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView title,date;
@@ -92,7 +87,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder>
         public void onClick(View v) {
             int adapterPosition = getAdapterPosition();
             FeedItem item = feedItems.get(adapterPosition);
-            clickHandler.onClick(item);
+            clickHandler.onPostClicked(item);
         }
     }
 }
