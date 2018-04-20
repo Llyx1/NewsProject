@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">NewsPaper</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="HomePage">Home page</string>
+    <string name="DailyNews">News of the day</string>
+    <string name="Soccer">Soccer</string>
+    <string name="Euro2016">Euro 2016</string>
+    <string name="Security">Security - Criminal</string>
+    <string name="Fashion">Fashion</string>
+    <string name="HiTech">Hi-tech fashion</string>
+    <string name="Finance">Finance - Real Estate</string>
+    <string name="Cooking">Cooking</string>
+    <string name="MakeUp">Make up</string>
+    <string name="Movie">Movie</string>
+    <string name="Education">Education - Study abroad</string>
+    <string name="youth">Young life</string>
+    <string name="Music">Music - MTV</string>
+    <string name="Sport">Sport</string>
+    <string name="Incredible">Incredible - odd</string>
+    <string name="Technology">Information Technology</string>
+    <string name="Automobile">Auto and Moto</string>
+    <string name="Consumer">Consumer Market</string>
+    <string name="Travel">Travel</string>
+    <string name="Health">Health</string>
+    <string name="Humour">Humour</string>
+    <string name="World">World</string>
+    <string name="People">People</string>
+    <string name="Entertainment">Entertainment</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

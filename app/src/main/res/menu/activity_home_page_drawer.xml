@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_page"
+            android:title="@string/HomePage" />
+        <item
+            android:id="@+id/nav_daily_news"
+            android:title="@string/DailyNews" />
+        <item
+            android:id="@+id/nav_soccer"
+            android:title="@string/Soccer" />
+        <item
+            android:id="@+id/nav_euro"
+            android:title="@string/Euro2016" />
+        <item
+            android:id="@+id/nav_security"
+            android:title="@string/Security" />
+        <item
+            android:id="@+id/nav_fashion"
+            android:title="@string/Fashion" />
+        <item
+            android:id="@+id/nav_high_tech"
+            android:title="@string/HiTech" />
+        <item
+            android:id="@+id/nav_finance"
+            android:title="@string/Finance" />
+        <item
+            android:id="@+id/nav_cooking"
+            android:title="@string/Cooking" />
+        <item
+            android:id="@+id/nav_make_up"
+            android:title="@string/MakeUp" />
+        <item
+            android:id="@+id/nav_movie"
+            android:title="@string/Movie" />
+        <item
+            android:id="@+id/nav_education"
+            android:title="@string/Education" />
+        <item
+            android:id="@+id/nav_youth"
+            android:title="@string/youth" />
+        <item
+            android:id="@+id/nav_music"
+            android:title="@string/Music" />
+        <item
+            android:id="@+id/nav_sport"
+            android:title="@string/Sport" />
+        <item
+            android:id="@+id/nav_incredible"
+            android:title="@string/Incredible" />
+        <item
+            android:id="@+id/nav_technology"
+            android:title="@string/Technology" />
+        <item
+            android:id="@+id/nav_automobile"
+            android:title="@string/Automobile" />
+        <item
+            android:id="@+id/nav_consumer"
+            android:title="@string/Consumer" />
+        <item
+            android:id="@+id/nav_travel"
+            android:title="@string/Travel" />
+        <item
+            android:id="@+id/nav_health"
+            android:title="@string/Health" />
+        <item
+            android:id="@+id/nav_humour"
+            android:title="@string/Humour" />
+        <item
+            android:id="@+id/nav_world"
+            android:title="@string/World" />
+        <item
+            android:id="@+id/nav_people"
+            android:title="@string/People" />
+        <item
+            android:id="@+id/nav_entertainment"
+            android:title="@string/Entertainment" />
+    </group>
+
+
+
+</menu>
