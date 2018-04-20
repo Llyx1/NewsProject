@@ -5,6 +5,8 @@ package com.example.boulocalix.newspaper;
  */
 
 public interface constant {
+
+
     public static final String QUERY_URL = "http://www.24h.com.vn/upload/rss/" ;
     public static final String HOME_PAGE= "trangchu24h";
     public static final String DAYLY_NEWS="tintuctrongngay";

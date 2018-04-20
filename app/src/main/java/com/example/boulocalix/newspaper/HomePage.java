@@ -19,7 +19,7 @@ import android.support.v7.widget.SearchView;
 import android.widget.SpinnerAdapter;
 
 public class HomePage extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,constant, SearchView.OnQueryTextListener {
+        implements NavigationView.OnNavigationItemSelectedListener, constant, SearchView.OnQueryTextListener {
 
     FragmentManager ft;
     RecyclerFragment recyclerFragment ;
@@ -161,7 +161,7 @@ public class HomePage extends AppCompatActivity
                 break;
             case R.id.nav_music :
                 url = QUERY_URL + MUSIC + RSS;
-                toolbar.setTitle(MOVIE_T);
+                toolbar.setTitle(MUSIC_T);
                 break;
             case R.id.nav_sport:
                 url = QUERY_URL + SPORT + RSS;
