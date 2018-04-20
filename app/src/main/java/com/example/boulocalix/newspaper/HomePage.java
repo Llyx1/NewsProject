@@ -1,28 +1,33 @@
 package com.example.boulocalix.newspaper;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.SpinnerAdapter;
 
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, constant {
 
     FragmentManager ft;
     RecyclerFragment recyclerFragment ;
-
+    Toolbar toolbar ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -36,8 +41,10 @@ public class HomePage extends AppCompatActivity
 //        recyclerView = findViewById(R.id.recyclerview) ;
 //        downloaderSpecial = new AsyncDownloaderSpecial(getApplicationContext(), this,  QUERY_URL+HOME_PAGE );
 //        downloaderSpecial.execute();
+
+        toolbar.setTitle(HOME_PAGE_T);
         ft = getSupportFragmentManager() ;
-        recyclerFragment = recyclerFragment.newInstance(QUERY_URL + HOME_PAGE);
+        recyclerFragment = recyclerFragment.newInstance(QUERY_URL + HOME_PAGE +RSS);
         ft.beginTransaction().replace(R.id.main_recycler_fragment, recyclerFragment).commit();
 
 
@@ -83,55 +90,80 @@ public class HomePage extends AppCompatActivity
         String url = null ;
 
         if (id == R.id.nav_home_page) {
-            url = QUERY_URL + HOME_PAGE;
+            url = QUERY_URL + HOME_PAGE +RSS;
+            toolbar.setTitle(HOME_PAGE_T);
         } else if (id == R.id.nav_daily_news) {
-            url = QUERY_URL + DAYLY_NEWS ;
+            url = QUERY_URL + DAYLY_NEWS+RSS ;
+            toolbar.setTitle(DAYLY_NEWS_T);
         } else if (id == R.id.nav_soccer) {
-            url = QUERY_URL + SOCCER ;
+            url = QUERY_URL + SOCCER+RSS ;
+            toolbar.setTitle(SOCCER_T);
         } else if (id == R.id.nav_euro) {
-            url = QUERY_URL + EURO_2016 ;
+            url = QUERY_URL + EURO_2016+RSS ;
+            toolbar.setTitle(EURO_2016_T);
         } else if (id == R.id.nav_security) {
-            url = QUERY_URL + SECURITY ;
+            url = QUERY_URL + SECURITY+RSS ;
+            toolbar.setTitle(SECURITY_T);
         } else if (id == R.id.nav_fashion) {
-            url = QUERY_URL + FASHION ;
+            url = QUERY_URL + FASHION +RSS;
+            toolbar.setTitle(FASHION_T);
         } else if (id == R.id.nav_high_tech) {
-            url = QUERY_URL + HIGH_TECH ;
+            url = QUERY_URL + HIGH_TECH +RSS;
+            toolbar.setTitle(HIGH_TECH_T);
         } else if (id == R.id.nav_finance) {
-            url = QUERY_URL + FINANCE ;
+            url = QUERY_URL + FINANCE +RSS;
+            toolbar.setTitle(FINANCE_T);
         } else if (id == R.id.nav_cooking) {
-            url = QUERY_URL + COOKING ;
+            url = QUERY_URL + COOKING+RSS ;
+            toolbar.setTitle(COOKING_T);
         } else if (id == R.id.nav_make_up) {
-            url = QUERY_URL + MAKE_UP ;
+            url = QUERY_URL + MAKE_UP +RSS;
+            toolbar.setTitle(MAKE_UP_T);
         } else if (id == R.id.nav_movie) {
-            url = QUERY_URL + MOVIE ;
+            url = QUERY_URL + MOVIE +RSS;
+            toolbar.setTitle(MOVIE_T);
         } else if (id == R.id.nav_education) {
-            url = QUERY_URL + EDUCATION ;
+            url = QUERY_URL + EDUCATION+RSS ;
+            toolbar.setTitle(EDUCATION_T);
         } else if (id == R.id.nav_youth) {
-            url = QUERY_URL + YOUTH ;
+            url = QUERY_URL + YOUTH+RSS ;
+            toolbar.setTitle(YOUTH_T);
         } else if (id == R.id.nav_music) {
-            url = QUERY_URL + MUSIC ;
+            url = QUERY_URL + MUSIC+RSS ;
+            toolbar.setTitle(MOVIE_T);
         } else if (id == R.id.nav_sport) {
-            url = QUERY_URL + SPORT ;
+            url = QUERY_URL + SPORT +RSS;
+            toolbar.setTitle(SPORT_T);
         } else if (id == R.id.nav_incredible) {
-            url = QUERY_URL + INCREDIBLE ;
+            url = QUERY_URL + INCREDIBLE +RSS;
+            toolbar.setTitle(INCREDIBLE_T);
         } else if (id == R.id.nav_technology) {
-            url = QUERY_URL + TECHNOLOGY ;
+            url = QUERY_URL + TECHNOLOGY +RSS;
+            toolbar.setTitle(TECHNOLOGY_T);
         } else if (id == R.id.nav_automobile) {
-            url = QUERY_URL + AUTOMOBILE ;
+            url = QUERY_URL + AUTOMOBILE +RSS;
+            toolbar.setTitle(AUTOMOBILE_T);
         } else if (id == R.id.nav_consumer) {
-            url = QUERY_URL + CONSUMER ;
+            url = QUERY_URL + CONSUMER +RSS;
+            toolbar.setTitle(CONSUMER_T);
         } else if (id == R.id.nav_travel) {
-            url = QUERY_URL + TRAVEL ;
+            url = QUERY_URL + TRAVEL+RSS ;
+            toolbar.setTitle(TRAVEL_T);
         } else if (id == R.id.nav_health) {
-            url = QUERY_URL + HEALTH ;
+            url = QUERY_URL + HEALTH +RSS;
+            toolbar.setTitle(HEALTH_T);
         } else if (id == R.id.nav_humour) {
-            url = QUERY_URL + HUMOUR ;
+            url = QUERY_URL + HUMOUR +RSS;
+            toolbar.setTitle(HUMOUR_T);
         } else if (id == R.id.nav_world) {
-            url = QUERY_URL + WORLD ;
+            url = QUERY_URL + WORLD +RSS;
+            toolbar.setTitle(WORLD_T);
         } else if (id == R.id.nav_people) {
-            url = QUERY_URL + PEOPLE ;
+            url = QUERY_URL + PEOPLE +RSS;
+            toolbar.setTitle(PEOPLE_T);
         } else if (id == R.id.nav_entertainment) {
-            url = QUERY_URL + ENTERTAINMENT ;
+            url = QUERY_URL + ENTERTAINMENT+RSS ;
+            toolbar.setTitle(ENTERTAINMENT_T);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

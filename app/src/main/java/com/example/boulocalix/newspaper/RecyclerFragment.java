@@ -64,7 +64,7 @@ public class RecyclerFragment extends Fragment implements AsyncResponse,constant
         } catch (IllegalStateException e) {
             throw new IllegalStateException("MainActivity must implement callbacks");
         }
-        if (!mUrl.equals(QUERY_URL + HOME_PAGE)){
+        if (!mUrl.equals(QUERY_URL + HOME_PAGE + RSS)){
         AsyncDownloader downloader = new AsyncDownloader(main, this, mUrl );
         downloader.execute();
         }

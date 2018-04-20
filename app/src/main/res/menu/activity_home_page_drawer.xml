@@ -6,78 +6,103 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home_page"
+            android:icon="@mipmap/home"
             android:title="@string/HomePage" />
         <item
             android:id="@+id/nav_daily_news"
+            android:icon="@mipmap/news"
             android:title="@string/DailyNews" />
         <item
             android:id="@+id/nav_soccer"
+            android:icon="@mipmap/soccer"
             android:title="@string/Soccer" />
         <item
             android:id="@+id/nav_euro"
+            android:icon="@mipmap/euro2016"
             android:title="@string/Euro2016" />
         <item
             android:id="@+id/nav_security"
+            android:icon="@mipmap/security"
             android:title="@string/Security" />
         <item
             android:id="@+id/nav_fashion"
+            android:icon="@mipmap/fashion"
             android:title="@string/Fashion" />
         <item
             android:id="@+id/nav_high_tech"
+            android:icon="@mipmap/high_tech"
             android:title="@string/HiTech" />
         <item
             android:id="@+id/nav_finance"
+            android:icon="@mipmap/finance"
             android:title="@string/Finance" />
         <item
             android:id="@+id/nav_cooking"
+            android:icon="@mipmap/cooking"
             android:title="@string/Cooking" />
         <item
             android:id="@+id/nav_make_up"
+            android:icon="@mipmap/make_up"
             android:title="@string/MakeUp" />
         <item
             android:id="@+id/nav_movie"
+            android:icon="@mipmap/movie"
             android:title="@string/Movie" />
         <item
             android:id="@+id/nav_education"
+            android:icon="@mipmap/education"
             android:title="@string/Education" />
         <item
             android:id="@+id/nav_youth"
+            android:icon="@mipmap/young"
             android:title="@string/youth" />
         <item
             android:id="@+id/nav_music"
+            android:icon="@mipmap/music"
             android:title="@string/Music" />
         <item
             android:id="@+id/nav_sport"
+            android:icon="@mipmap/sport"
             android:title="@string/Sport" />
         <item
             android:id="@+id/nav_incredible"
+            android:icon="@mipmap/incredible"
             android:title="@string/Incredible" />
         <item
             android:id="@+id/nav_technology"
+            android:icon="@mipmap/techno"
             android:title="@string/Technology" />
         <item
             android:id="@+id/nav_automobile"
+            android:icon="@mipmap/auto"
             android:title="@string/Automobile" />
         <item
             android:id="@+id/nav_consumer"
+            android:icon="@mipmap/market"
             android:title="@string/Consumer" />
         <item
             android:id="@+id/nav_travel"
+            android:icon="@mipmap/travel"
             android:title="@string/Travel" />
         <item
             android:id="@+id/nav_health"
+            android:icon="@mipmap/health"
             android:title="@string/Health" />
         <item
             android:id="@+id/nav_humour"
+            android:icon="@mipmap/humour"
             android:title="@string/Humour" />
         <item
             android:id="@+id/nav_world"
+            android:icon="@mipmap/world"
             android:title="@string/World" />
         <item
             android:id="@+id/nav_people"
+            android:icon="@mipmap/people"
             android:title="@string/People" />
         <item
             android:id="@+id/nav_entertainment"
+            android:icon="@mipmap/entertainment"
             android:title="@string/Entertainment" />
     </group>
 
