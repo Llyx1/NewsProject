@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 /**
@@ -31,6 +32,7 @@ public class RecyclerFragment extends Fragment implements AsyncResponse,constant
     NewsAdapter adapter ;
     RecyclerView recyclerView ;
     SwipeRefreshLayout mySwipeRefreshLayout ;
+    ArrayList<FeedItem> feedItemsDisplayed ;
     ArrayList<FeedItem> feedItems ;
 
     private static final String URL = "url";
@@ -68,6 +70,7 @@ public class RecyclerFragment extends Fragment implements AsyncResponse,constant
             throw new IllegalStateException("MainActivity must implement callbacks");
         }
         feedItems =new ArrayList<>() ;
+        feedItemsDisplayed = new ArrayList<>();
         downloadData(mUrl);
 
     }
@@ -123,9 +126,11 @@ public class RecyclerFragment extends Fragment implements AsyncResponse,constant
 
     @Override
     public void processFinish(ArrayList<FeedItem> feedItemsOutput) {
+        this.feedItemsDisplayed.clear();
+        this.feedItemsDisplayed.addAll(feedItemsOutput) ;
         this.feedItems.clear();
         this.feedItems.addAll(feedItemsOutput) ;
-        adapter = new NewsAdapter(main, feedItemsOutput);
+        adapter = new NewsAdapter(main, feedItemsDisplayed);
         recyclerView.setLayoutManager(new LinearLayoutManager(main));
         recyclerView.setAdapter(adapter);
         adapter.setListener(this);
@@ -141,10 +146,13 @@ public class RecyclerFragment extends Fragment implements AsyncResponse,constant
     }
 
     @Override
-    public void onHomeToFragment(String textResearchTool) {
-        for (FeedItem item : feedItems) {
-            if (!item.getTitle().contains(textResearchTool)) {
-                feedItems.remove(item) ;
+    public void onHomeToFragment(final String textResearchTool) {
+        feedItemsDisplayed.clear();
+        feedItemsDisplayed.addAll(feedItems) ;
+        if (!textResearchTool.equals("")) {
+            for (Iterator<FeedItem> it = feedItemsDisplayed.iterator(); it.hasNext(); ) {
+                if (!it.next().getTitle().contains(textResearchTool))
+                    it.remove();
             }
         }
         adapter.notifyDataSetChanged();

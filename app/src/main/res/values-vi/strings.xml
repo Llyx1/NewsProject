@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NewsPaper</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="HomePage">Trang chủ</string>
+    <string name="DailyNews">Tin tức trong ngày</string>
+    <string name="Soccer">Bóng đá</string>
+    <string name="Euro2016">Euro 2016</string>
+    <string name="Security">An ninh - Hình sự</string>
+    <string name="Fashion">Thời trang</string>
+    <string name="HiTech">Thời trang Hi-tech</string>
+    <string name="Finance">Tài chính – Bất động sản</string>
+    <string name="Cooking">Ẩm thực</string>
+    <string name="MakeUp">Làm đẹp</string>
+    <string name="Movie">Phim</string>
+    <string name="Education">Giáo dục - du học</string>
+    <string name="youth">Bạn trẻ - Cuộc sống</string>
+    <string name="Music">Ca nhạc - MTV</string>
+    <string name="Sport">Thể thao</string>
+    <string name="Incredible">Phi thường - kỳ quặc</string>
+    <string name="Technology">Công nghệ thông tin</string>
+    <string name="Automobile">Ô tô - Xe máy</string>
+    <string name="Consumer">Thị trường - Tiêu dùng</string>
+    <string name="Travel">Du lịch</string>
+    <string name="Health">Sức khỏe đời sống</string>
+    <string name="Humour">Cười 24h</string>
+    <string name="World">Thế giới</string>
+    <string name="People">People</string>
+    <string name="Entertainment">Đời sống Showbiz</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_search">Search</string>
+</resources>
